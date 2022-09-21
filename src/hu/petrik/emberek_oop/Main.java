@@ -1,4 +1,4 @@
-package hu.petrik.template_project;
+package hu.petrik.emberek_oop;
 
 public class Main {
     public static void main(String[] args) {
