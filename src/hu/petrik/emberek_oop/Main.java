@@ -7,7 +7,12 @@ public class Main {
     static ArrayList<Ember> testData = new ArrayList<Ember>();
 
     public static void main(String[] args) {
+        generateTestData();
         testEmber();
+        testGetBirthYear();
+        testGetBirthMonth();
+        testGetBirthDay();
+        testGetAge();
     }
 
     static void generateTestData() {
@@ -21,5 +26,30 @@ public class Main {
             System.out.println(ember);
         }
     }
+
+    static void testGetBirthYear() {
+        for (Ember ember : testData) {
+            System.out.printf("%s születési éve: %d%n", ember.nev, ember.getBirthYear());
+        }
+    }
+
+    static void testGetBirthMonth() {
+        for (Ember ember : testData) {
+            System.out.printf("%s születési hónapja: %d%n", ember.nev, ember.getBirthMonth());
+        }
+    }
+
+    static void testGetBirthDay() {
+        for (Ember ember : testData) {
+            System.out.printf("%s születési napja: %d%n", ember.nev, ember.getBirthDay());
+        }
+    }
+
+    static void testGetAge() {
+        for (Ember ember : testData) {
+            System.out.printf("%s %d éves%n", ember.nev, ember.getAge());
+        }
+    }
+
 
 }
