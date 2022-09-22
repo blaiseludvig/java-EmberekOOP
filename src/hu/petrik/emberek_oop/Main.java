@@ -13,6 +13,7 @@ public class Main {
         testGetBirthMonth();
         testGetBirthDay();
         testGetAge();
+        testEmberek();
     }
 
     static void generateTestData() {
@@ -49,6 +50,11 @@ public class Main {
         for (Ember ember : testData) {
             System.out.printf("%s %d éves%n", ember.nev, ember.getAge());
         }
+    }
+
+    static void testEmberek() {
+        Emberek emberek = new Emberek();
+        System.out.println(emberek.toString());
     }
 
 
