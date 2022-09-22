@@ -12,6 +12,12 @@ public class Ember {
         this.szulHely = szulHely;
     }
 
+    public Ember(String[] data) {
+        this.nev = data[0];
+        this.szulDatum = data[1];
+        this.szulHely = data[2];
+    }
+
     public int getAge() {
         LocalDate birthdate = LocalDate.of(getBirthYear(), getBirthMonth(), getBirthDay());
         int age = (int) java.time.temporal.ChronoUnit.YEARS.between(birthdate, LocalDate.now());
