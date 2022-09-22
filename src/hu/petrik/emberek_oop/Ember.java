@@ -6,15 +6,23 @@ public class Ember {
 
     String nev, szulDatum, szulHely;
 
+
     public Ember(String nev, String szulDatum, String szulHely) {
         this.nev = nev;
+
+        szulDatum = szulDatum.replaceAll("-", ".");
+        szulDatum = szulDatum.replaceAll("\\s", "");
         this.szulDatum = szulDatum;
+
         this.szulHely = szulHely;
     }
 
     public Ember(String[] data) {
         this.nev = data[0];
-        this.szulDatum = data[1];
+        String szulDatum = data[1];
+        szulDatum = szulDatum.replaceAll("-", ".");
+        szulDatum = szulDatum.replaceAll("\\s", "");
+        this.szulDatum = szulDatum;
         this.szulHely = data[2];
     }
 
