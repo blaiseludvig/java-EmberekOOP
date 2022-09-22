@@ -1,6 +1,7 @@
 package hu.petrik.emberek_oop;
 
-import java.util.ArrayList;;
+import java.util.ArrayList;
+import java.util.Arrays;;
 
 public class Emberek {
 
@@ -12,6 +13,10 @@ public class Emberek {
         emberek.add(new Ember("Among Ernő", "420.06.09", "Amimir"));
         emberek.add(new Ember("Pista Julis", "1950.03.04", "Debrecen"));
         emberek.add(new Ember("Béla Béla", "1999. 12. 31", "Miskolc"));
+    }
+
+    public Emberek(Ember[] emberTomb) {
+        this.emberek.addAll(Arrays.asList(emberTomb));
     }
 
     @Override
