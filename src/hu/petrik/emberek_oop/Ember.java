@@ -1,9 +1,6 @@
 package hu.petrik.emberek_oop;
 
-import java.time.Duration;
 import java.time.LocalDate;
-import java.time.Year;
-import java.util.Calendar;
 
 public class Ember {
 
