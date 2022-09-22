@@ -1,5 +1,8 @@
 package hu.petrik.emberek_oop;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class Main {
@@ -54,7 +57,19 @@ public class Main {
 
     static void testEmberek() {
         Emberek emberek = new Emberek();
-        System.out.println(emberek.toString());
+        System.out.println(emberek);
+
+        final String PATH = "emberek.txt";
+
+        try {
+            Emberek emberek2 = new Emberek(PATH);
+            System.out.println(emberek2);
+        } catch (FileNotFoundException e){
+            System.out.printf("A(z) %s fájl nem található%n", PATH);
+        } catch (IOException e){
+            System.out.println("Ismeretlen hiba történt!");
+        }
+
     }
 
 
