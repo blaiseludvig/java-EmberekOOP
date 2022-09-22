@@ -41,7 +41,11 @@ public class Emberek {
         String str = "";
 
         for (Ember ember : emberek) {
-            str += ember.toString() + '\n';
+            str += String.format("név: %-25s | születési dátum: %-10s (%3d év) | születési hely: %s\n",
+                    ember.nev,
+                    ember.szulDatum,
+                    ember.getAge(),
+                    ember.szulHely);
         }
 
         return str;
